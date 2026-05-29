@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyvex - Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">N</div>
+                <div class="logo-text">
+                    <span class="logo-name">Nyvex</span>
+                    <span class="logo-tagline">Mobile Auto Detailing</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="booking.html" class="nav-link">Booking</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+            </nav>
+            <div class="header-right">
+                <div class="header-actions">
+                    <button class="icon-btn" id="themeBtn"><i class="fas fa-moon"></i></button>
+                    <div class="profile-dropdown-wrapper">
+                        <button class="icon-btn" id="profileBtn"><i class="fas fa-user"></i></button>
+                        <div class="profile-dropdown" id="profileDropdown">
+                            <a href="auth.html" class="dropdown-item"><i class="fas fa-sign-in-alt"></i> Log In</a>
+                            <a href="dashboard.html" class="dropdown-item"><i class="fas fa-user-circle"></i> User Dashboard</a>
+                            <a href="admin.html" class="dropdown-item"><i class="fas fa-cogs"></i> Admin Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="blog-hero">
+        <div class="container">
+            <div class="blog-hero-icon"><i class="fas fa-blog"></i></div>
+            <h1 class="blog-hero-title">Our <span class="accent">Blog</span></h1>
+            <p class="blog-hero-subtitle">Tips, guides, and insights on car care and detailing</p>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-section">
+        <div class="container">
+            <!-- Categories -->
+            <div class="blog-categories">
+                <button class="blog-cat active">All</button>
+                <button class="blog-cat">Car Care Tips</button>
+                <button class="blog-cat">Ceramic Coating</button>
+                <button class="blog-cat">Interior</button>
+                <button class="blog-cat">Guides</button>
+            </div>
+
+            <!-- Featured Post -->
+            <a href="blog-detail.html" class="featured-post">
+                <div class="fp-image">
+                    <img src="images/ceramic coating-after.jpg.jpeg" alt="Featured Post">
+                </div>
+                <div class="fp-content">
+                    <span class="fp-tag">Ceramic Coating</span>
+                    <h2>The Complete Guide to Ceramic Coating: Is It Worth It?</h2>
+                    <p>Everything you need to know about ceramic coating — how it works, how long it lasts, and whether it's the right choice for your vehicle.</p>
+                    <div class="fp-meta">
+                        <span><i class="fas fa-user"></i> Arun Kumar</span>
+                        <span><i class="fas fa-calendar"></i> May 25, 2026</span>
+                        <span><i class="fas fa-clock"></i> 8 min read</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Blog Grid -->
+            <div class="blog-grid">
+                <a href="blog-interior.html" class="blog-card">
+                    <div class="bc-image">
+                        <img src="images/interior detailing-after.jpg.jpeg" alt="Blog Post">
+                        <span class="bc-tag">Interior</span>
+                    </div>
+                    <div class="bc-content">
+                        <h3>5 Signs Your Car Interior Needs Professional Detailing</h3>
+                        <p>Don't wait until it's too late. Here are the telltale signs that your car's interior needs expert attention.</p>
+                        <div class="bc-meta">
+                            <span><i class="fas fa-calendar"></i> May 18, 2026</span>
+                            <span><i class="fas fa-clock"></i> 5 min</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="blog-paint.html" class="blog-card">
+                    <div class="bc-image">
+                        <img src="images/paint correction-after.jpg.jpeg" alt="Blog Post">
+                        <span class="bc-tag">Guides</span>
+                    </div>
+                    <div class="bc-content">
+                        <h3>Paint Correction vs. Paint Protection: What's the Difference?</h3>
+                        <p>Many car owners confuse these two services. Here's a clear breakdown of what each does and when you need them.</p>
+                        <div class="bc-meta">
+                            <span><i class="fas fa-calendar"></i> May 12, 2026</span>
+                            <span><i class="fas fa-clock"></i> 6 min</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="blog-wash.html" class="blog-card">
+                    <div class="bc-image">
+                        <img src="images/foam wash-after.jpg.jpeg" alt="Blog Post">
+                        <span class="bc-tag">Car Care Tips</span>
+                    </div>
+                    <div class="bc-content">
+                        <h3>How Often Should You Wash Your Car? The Expert Answer</h3>
+                        <p>Too much or too little washing can both damage your paint. Find the sweet spot for your driving conditions.</p>
+                        <div class="bc-meta">
+                            <span><i class="fas fa-calendar"></i> May 5, 2026</span>
+                            <span><i class="fas fa-clock"></i> 4 min</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="blog-engine.html" class="blog-card">
+                    <div class="bc-image">
+                        <img src="images/engine cleaning-after.jpg.jpeg" alt="Blog Post">
+                        <span class="bc-tag">Guides</span>
+                    </div>
+                    <div class="bc-content">
+                        <h3>Why Engine Bay Cleaning Matters More Than You Think</h3>
+                        <p>A clean engine isn't just about looks — it helps with maintenance, resale value, and spotting leaks early.</p>
+                        <div class="bc-meta">
+                            <span><i class="fas fa-calendar"></i> Apr 28, 2026</span>
+                            <span><i class="fas fa-clock"></i> 5 min</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="blog-headlight.html" class="blog-card">
+                    <div class="bc-image">
+                        <img src="images/headlight restoration-after.jpg.jpeg" alt="Blog Post">
+                        <span class="bc-tag">Car Care Tips</span>
+                    </div>
+                    <div class="bc-content">
+                        <h3>Foggy Headlights? Here's How to Restore Them</h3>
+                        <p>Cloudy headlights reduce visibility by up to 80%. Learn why it happens and how professional restoration fixes it.</p>
+                        <div class="bc-meta">
+                            <span><i class="fas fa-calendar"></i> Apr 20, 2026</span>
+                            <span><i class="fas fa-clock"></i> 4 min</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="blog-detail.html" class="blog-card">
+                    <div class="bc-image">
+                        <img src="images/ceramic coating-before.jpg.jpeg" alt="Blog Post">
+                        <span class="bc-tag">Ceramic Coating</span>
+                    </div>
+                    <div class="bc-content">
+                        <h3>Ceramic Coating Aftercare: Do's and Don'ts</h3>
+                        <p>You've invested in ceramic coating — now here's how to maintain it properly for maximum longevity.</p>
+                        <div class="bc-meta">
+                            <span><i class="fas fa-calendar"></i> Apr 15, 2026</span>
+                            <span><i class="fas fa-clock"></i> 6 min</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nyvex Mobile Auto Detailing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

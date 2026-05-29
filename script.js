@@ -25,17 +25,19 @@ themeBtn.addEventListener('click', () => {
 const profileBtn = document.getElementById('profileBtn');
 const profileDropdown = document.getElementById('profileDropdown');
 
-profileBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    profileDropdown.classList.toggle('active');
-});
+if (profileBtn && profileDropdown) {
+    profileBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        profileDropdown.classList.toggle('active');
+    });
 
-// Close dropdown when clicking outside
-document.addEventListener('click', (e) => {
-    if (!profileDropdown.contains(e.target) && e.target !== profileBtn) {
-        profileDropdown.classList.remove('active');
-    }
-});
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!profileDropdown.contains(e.target) && e.target !== profileBtn) {
+            profileDropdown.classList.remove('active');
+        }
+    });
+}
 
 // Mobile Menu Toggle
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
