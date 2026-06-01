@@ -97,3 +97,14 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.service-card, .feature-item, .why-card, .review-card').forEach(el => {
     observer.observe(el);
 });
+
+
+// FAQ Preview Accordion
+document.querySelectorAll('.fpq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-preview-item');
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-preview-item').forEach(i => i.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
+    });
+});
