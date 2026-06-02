@@ -470,3 +470,124 @@
         grid-template-columns: 1fr 1fr;
     }
 }
+
+/* Why Book With Us */
+.why-book-section {
+    padding: 0 0 10px;
+}
+
+.why-book-badges {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.why-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.why-badge:hover {
+    border-color: rgba(79, 227, 227, 0.3);
+    transform: translateY(-2px);
+}
+
+.why-badge i {
+    color: var(--accent);
+    font-size: 14px;
+}
+
+/* Price Estimate */
+.price-estimate {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 20px;
+    background: rgba(79, 227, 227, 0.04);
+    border: 1px solid rgba(79, 227, 227, 0.15);
+    border-radius: 12px;
+    margin-bottom: 24px;
+    font-size: 15px;
+    color: var(--text-primary);
+}
+
+.price-estimate i {
+    color: var(--accent);
+    font-size: 16px;
+}
+
+.price-estimate strong {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .why-book-badges {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .why-badge {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+}
+
+
+/* Package Selection */
+.package-select { margin-bottom: 20px; }
+.package-select-title { font-size: 15px; font-weight: 600; margin-bottom: 12px; }
+
+.package-select-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+
+.package-select-card { cursor: pointer; }
+.package-select-card input { display: none; }
+
+.psc-inner {
+    padding: 20px 16px;
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
+    border-radius: 14px;
+    text-align: center;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.package-select-card input:checked + .psc-inner {
+    border-color: var(--accent);
+    background: rgba(79, 227, 227, 0.05);
+    box-shadow: 0 0 20px rgba(79, 227, 227, 0.1);
+}
+
+.psc-inner:hover { border-color: rgba(79, 227, 227, 0.4); }
+
+.psc-tag { position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #020817; font-size: 9px; font-weight: 700; padding: 3px 10px; border-radius: 10px; text-transform: uppercase; }
+.psc-name { display: block; font-size: 14px; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+.psc-amt { display: block; font-size: 20px; font-weight: 800; color: var(--accent); margin-bottom: 6px; }
+.psc-desc { display: block; font-size: 11px; color: var(--text-secondary); }
+
+.or-divider { display: flex; align-items: center; margin: 24px 0; }
+.or-divider::before, .or-divider::after { content: ''; flex: 1; height: 1px; background: var(--border-color); }
+.or-divider span { padding: 0 14px; font-size: 12px; color: var(--text-secondary); font-weight: 500; }
+
+@media (max-width: 768px) {
+    .package-select-grid { grid-template-columns: 1fr; }
+}
+
+
+/* Fix date input calendar icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}

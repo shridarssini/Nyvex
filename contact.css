@@ -372,3 +372,59 @@
         height: 250px;
     }
 }
+
+/* Response Time Badge */
+.response-time-section {
+    padding: 0 0 30px;
+}
+
+.response-time-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 20px 28px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.response-time-card:hover {
+    border-color: rgba(79, 227, 227, 0.3);
+    transform: translateY(-2px);
+}
+
+.response-time-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(79, 227, 227, 0.15), rgba(79, 227, 227, 0.03));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.response-time-info strong {
+    font-size: 14px;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 2px;
+}
+
+.response-time-info p {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .response-time-card {
+        max-width: 100%;
+    }
+}

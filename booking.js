@@ -7,11 +7,49 @@ let currentStep = 1;
 // Pre-select service from URL parameter
 const urlParams = new URLSearchParams(window.location.search);
 const preSelectedService = urlParams.get('service');
+const preSelectedPackage = urlParams.get('package');
+
 if (preSelectedService) {
     const checkbox = document.querySelector(`input[name="service"][value="${preSelectedService}"]`);
-    if (checkbox) {
-        checkbox.checked = true;
+    if (checkbox) checkbox.checked = true;
+}
+
+if (preSelectedPackage) {
+    const radio = document.querySelector(`input[name="package"][value="${preSelectedPackage}"]`);
+    if (radio) radio.checked = true;
+}
+
+// Package selection deselects individual services and vice versa
+document.querySelectorAll('input[name="package"]').forEach(radio => {
+    radio.addEventListener('change', () => {
+        document.querySelectorAll('input[name="service"]').forEach(cb => cb.checked = false);
+        updatePriceEstimate();
+    });
+});
+
+document.querySelectorAll('input[name="service"]').forEach(cb => {
+    cb.addEventListener('change', () => {
+        document.querySelectorAll('input[name="package"]').forEach(r => r.checked = false);
+        updatePriceEstimate();
+    });
+});
+
+function updatePriceEstimate() {
+    const priceEl = document.getElementById('priceEstimate');
+    if (!priceEl) return;
+    
+    const selectedPackage = document.querySelector('input[name="package"]:checked');
+    if (selectedPackage) {
+        priceEl.textContent = `Estimated Total: ₹${Number(selectedPackage.dataset.price).toLocaleString()}`;
+        return;
     }
+    
+    const prices = { ceramic: 4999, paint: 2999, interior: 1499, foam: 999, engine: 799, headlight: 599 };
+    let total = 0;
+    document.querySelectorAll('input[name="service"]:checked').forEach(cb => {
+        total += prices[cb.value] || 0;
+    });
+    priceEl.textContent = `Estimated Total: ₹${total.toLocaleString()}`;
 }
 
 function showStep(stepNum) {
@@ -67,12 +105,18 @@ document.querySelectorAll('.prev-btn').forEach(btn => {
 
 // Populate confirmation
 function populateConfirmation() {
-    // Services
-    const checked = document.querySelectorAll('input[name="service"]:checked');
-    const services = Array.from(checked).map(cb => {
-        return cb.closest('.service-select-card').querySelector('h4').textContent;
-    });
-    document.getElementById('confirmServices').textContent = services.length > 0 ? services.join(', ') : '—';
+    // Services or Package
+    const selectedPackage = document.querySelector('input[name="package"]:checked');
+    if (selectedPackage) {
+        const packageNames = { basic: 'Basic Package (₹1,499)', standard: 'Standard Package (₹4,999)', premium: 'Premium Package (₹8,999)' };
+        document.getElementById('confirmServices').textContent = packageNames[selectedPackage.value] || '—';
+    } else {
+        const checked = document.querySelectorAll('input[name="service"]:checked');
+        const services = Array.from(checked).map(cb => {
+            return cb.closest('.service-select-card').querySelector('h4').textContent;
+        });
+        document.getElementById('confirmServices').textContent = services.length > 0 ? services.join(', ') : '—';
+    }
 
     // Vehicle
     const type = document.getElementById('vehicleType');
@@ -117,3 +161,32 @@ document.getElementById('submitBooking').addEventListener('click', () => {
     // Hide progress
     document.querySelector('.booking-progress').style.display = 'none';
 });
+
+// Price Estimate Calculator
+const servicePrices = {
+    ceramic: 4999,
+    paint: 2999,
+    interior: 1499,
+    foam: 999,
+    engine: 799,
+    headlight: 599
+};
+
+function updatePriceEstimate() {
+    const checked = document.querySelectorAll('input[name="service"]:checked');
+    let total = 0;
+    checked.forEach(cb => {
+        total += servicePrices[cb.value] || 0;
+    });
+    const estimateEl = document.getElementById('priceEstimate');
+    if (estimateEl) {
+        estimateEl.querySelector('strong').textContent = '₹' + total.toLocaleString('en-IN');
+    }
+}
+
+document.querySelectorAll('input[name="service"]').forEach(cb => {
+    cb.addEventListener('change', updatePriceEstimate);
+});
+
+// Initialize estimate on load (in case of pre-selected service)
+updatePriceEstimate();

@@ -56,6 +56,26 @@
         </div>
     </section>
 
+    <!-- Why Book With Us -->
+    <section class="why-book-section">
+        <div class="container">
+            <div class="why-book-badges">
+                <div class="why-badge">
+                    <i class="fas fa-home"></i>
+                    <span>Doorstep Service</span>
+                </div>
+                <div class="why-badge">
+                    <i class="fas fa-tag"></i>
+                    <span>No Hidden Fees</span>
+                </div>
+                <div class="why-badge">
+                    <i class="fas fa-thumbs-up"></i>
+                    <span>Satisfaction Guaranteed</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Booking Form -->
     <section class="booking-section">
         <div class="container">
@@ -86,7 +106,42 @@
                 <!-- Step 1: Service Selection -->
                 <div class="booking-step active" id="step1">
                     <h2>Select Your Service</h2>
-                    <p class="step-desc">Choose one or more services for your vehicle</p>
+                    <p class="step-desc">Choose a package or individual services</p>
+
+                    <!-- Package Selection -->
+                    <div class="package-select">
+                        <h3 class="package-select-title">Packages</h3>
+                        <div class="package-select-grid">
+                            <label class="package-select-card">
+                                <input type="radio" name="package" value="basic" data-price="1499">
+                                <div class="psc-inner">
+                                    <span class="psc-name">Basic</span>
+                                    <span class="psc-amt">₹1,499</span>
+                                    <span class="psc-desc">Exterior + Interior Clean</span>
+                                </div>
+                            </label>
+                            <label class="package-select-card popular">
+                                <input type="radio" name="package" value="standard" data-price="4999">
+                                <div class="psc-inner">
+                                    <span class="psc-tag">Popular</span>
+                                    <span class="psc-name">Standard</span>
+                                    <span class="psc-amt">₹4,999</span>
+                                    <span class="psc-desc">Clean + Protection + Scratch Removal</span>
+                                </div>
+                            </label>
+                            <label class="package-select-card">
+                                <input type="radio" name="package" value="premium" data-price="8999">
+                                <div class="psc-inner">
+                                    <span class="psc-name">Premium</span>
+                                    <span class="psc-amt">₹8,999</span>
+                                    <span class="psc-desc">Everything + UV Protection + Warranty</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="or-divider"><span>OR choose individual services</span></div>
+
                     <div class="service-select-grid">
                         <label class="service-select-card">
                             <input type="checkbox" name="service" value="ceramic">
@@ -136,6 +191,10 @@
                                 <span class="select-price">From ₹599</span>
                             </div>
                         </label>
+                    </div>
+                    <div class="price-estimate" id="priceEstimate">
+                        <i class="fas fa-receipt"></i>
+                        <span>Estimated Total: <strong>₹0</strong></span>
                     </div>
                     <div class="step-actions">
                         <button class="btn btn-primary next-btn" data-next="2">Next <i class="fas fa-arrow-right"></i></button>

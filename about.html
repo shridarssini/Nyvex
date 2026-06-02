@@ -338,6 +338,52 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Stat Counter Animation
+        function animateCounters() {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach(el => {
+                const text = el.textContent;
+                const match = text.match(/(\d+)/);
+                if (!match) return;
+                const target = parseInt(match[0]);
+                const suffix = text.replace(match[0], '').trim();
+                const prefix = text.substring(0, text.indexOf(match[0]));
+                let current = 0;
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                el.textContent = prefix + '0' + suffix;
+
+                function updateCounter() {
+                    current += increment;
+                    if (current >= target) {
+                        el.textContent = text;
+                    } else {
+                        el.textContent = prefix + Math.floor(current) + suffix;
+                        requestAnimationFrame(updateCounter);
+                    }
+                }
+                updateCounter();
+            });
+        }
+
+        // Intersection Observer to trigger animation on scroll
+        const statsSection = document.querySelector('.about-stats');
+        let hasAnimated = false;
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !hasAnimated) {
+                    hasAnimated = true;
+                    animateCounters();
+                }
+            });
+        }, { threshold: 0.3 });
+
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+    </script>
 </body>
 </html>
 
