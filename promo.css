@@ -92,7 +92,7 @@
     max-width: 480px;
 }
 
-.promo-hero-cta { display: flex; flex-direction: column; gap: 18px; }
+.promo-hero-cta { display: flex; flex-direction: column; gap: 18px; align-items: flex-start; }
 
 .btn-lg { padding: 16px 32px; font-size: 16px; }
 

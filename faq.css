@@ -1,63 +1,11 @@
 /* ===== FAQ Page Styles ===== */
 
-/* Hero */
-.faq-hero {
-    padding: 140px 0 60px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
 
-.faq-hero::before {
-    content: '';
-    position: absolute;
-    top: -150px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 700px;
-    height: 700px;
-    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 60%);
-    opacity: 0.12;
-    border-radius: 50%;
-}
-
-.faq-hero-icon {
-    width: 70px;
-    height: 70px;
-    border-radius: 18px;
-    background: linear-gradient(135deg, rgba(79, 227, 227, 0.15), rgba(79, 227, 227, 0.03));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-    color: var(--accent);
-    font-size: 28px;
-    position: relative;
-    z-index: 1;
-}
-
-.faq-hero-title {
-    font-size: 44px;
-    font-weight: 800;
-    margin-bottom: 14px;
-    position: relative;
-    z-index: 1;
-}
-
-.faq-hero-subtitle {
-    font-size: 16px;
-    color: var(--text-secondary);
-    max-width: 500px;
-    margin: 0 auto 30px;
-    line-height: 1.6;
-    position: relative;
-    z-index: 1;
-}
 
 /* Search */
 .faq-search {
-    max-width: 480px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0 auto 20px;
     position: relative;
     z-index: 1;
 }
@@ -98,6 +46,12 @@
     padding: 50px 0 80px;
 }
 
+.faq-content .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 /* Category Tabs */
 .faq-categories {
     display: flex;
@@ -133,8 +87,11 @@
 
 /* FAQ Items */
 .faq-list {
-    max-width: 750px;
+    max-width: 100%;
     margin: 0 auto;
+    text-align: left;
+    padding: 0;
+}
 }
 
 .faq-item {
@@ -293,10 +250,6 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-    .faq-hero-title {
-        font-size: 32px;
-    }
-
     .faq-categories {
         justify-content: flex-start;
         overflow-x: auto;

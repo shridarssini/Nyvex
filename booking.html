@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23020817'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='20' fill='%234FE3E3'%3EN%3C/text%3E%3C/svg%3E">`n    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nyvex - Book Appointment</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="booking.css">
@@ -13,22 +13,22 @@
     <header class="header">
         <div class="container header-content">
             <a href="index.html" class="logo">
-                <div class="logo-icon">N</div>
+                <img src="images/logo.png" alt="Nyvex" class="logo-img">
                 <div class="logo-text">
                     <span class="logo-name">Nyvex</span>
-                    <span class="logo-tagline">Mobile Auto Detailing</span>
+                    
                 </div>
             </a>
-            <nav class="nav">
+                        <nav class="nav">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="booking.html" class="nav-link active">Booking</a>
-                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="promo.html" class="nav-link">Home2</a>
                 <a href="about.html" class="nav-link">About Us</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="blog.html" class="nav-link">Blog</a>
                 <a href="contact.html" class="nav-link">Contact</a>
-                <a href="blog.html" class="nav-link">Blog</a> <a href="promo.html" class="nav-link">Home2</a>
             </nav>
-            <div class="header-right">
+            <div class="header-right"><a href="booking.html" class="nav-book-btn">Book Now</a>
                 <div class="header-actions">
                     <button class="icon-btn" id="themeBtn"><i class="fas fa-moon"></i></button>
                     <div class="profile-dropdown-wrapper">
@@ -48,11 +48,15 @@
     </header>
 
     <!-- Page Hero -->
-    <section class="booking-hero">
-        <div class="container">
-            <div class="booking-hero-icon"><i class="fas fa-calendar-check"></i></div>
-            <h1 class="booking-hero-title">Book Your <span class="accent">Appointment</span></h1>
-            <p class="booking-hero-subtitle">Choose your service, pick a date, and we'll come to you. It's that simple.</p>
+    <section class="page-hero">
+        <div class="page-hero-glow"></div>
+        <div class="container page-hero-content">
+            <div class="page-hero-text">
+                <span class="page-hero-tag">Schedule Now</span>
+                <h1 class="page-hero-title">Book Your <span class="accent">Appointment</span></h1>
+                <p class="page-hero-desc">Choose your service, pick a date, and we'll come to you. Simple and hassle-free.</p>
+            </div>
+            <div class="page-hero-deco"><i class="fas fa-calendar-check"></i></div>
         </div>
     </section>
 
@@ -338,10 +342,10 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <div class="logo">
-                        <div class="logo-icon">N</div>
+                        <img src="images/logo.png" alt="Nyvex" class="logo-img">
                         <div class="logo-text">
                             <span class="logo-name">Nyvex</span>
-                            <span class="logo-tagline">Mobile Auto Detailing</span>
+                            
                         </div>
                     </div>
                     <p class="footer-about">Professional auto detailing and ceramic coating services. We bring premium car care to your doorstep.</p>
@@ -402,5 +406,10 @@
     <script src="booking.js"></script>
 </body>
 </html>
+
+
+
+
+
 
 

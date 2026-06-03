@@ -108,3 +108,21 @@ document.querySelectorAll('.fpq-question').forEach(btn => {
         if (!isActive) item.classList.add('active');
     });
 });
+
+
+// Scroll Reveal
+const revealElements = document.querySelectorAll('.reveal');
+
+function checkReveal() {
+    revealElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        if (rect.top < windowHeight - 50) {
+            el.classList.add('visible');
+        }
+    });
+}
+
+// Trigger on load and scroll
+window.addEventListener('load', checkReveal);
+window.addEventListener('scroll', checkReveal);

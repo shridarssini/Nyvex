@@ -1,58 +1,6 @@
 /* ===== Contact Page Styles ===== */
 
-/* Hero */
-.contact-hero {
-    padding: 140px 0 60px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
 
-.contact-hero::before {
-    content: '';
-    position: absolute;
-    top: -150px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 700px;
-    height: 700px;
-    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 60%);
-    opacity: 0.12;
-    border-radius: 50%;
-}
-
-.contact-hero-icon {
-    width: 70px;
-    height: 70px;
-    border-radius: 18px;
-    background: linear-gradient(135deg, rgba(79, 227, 227, 0.15), rgba(79, 227, 227, 0.03));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-    color: var(--accent);
-    font-size: 28px;
-    position: relative;
-    z-index: 1;
-}
-
-.contact-hero-title {
-    font-size: 44px;
-    font-weight: 800;
-    margin-bottom: 14px;
-    position: relative;
-    z-index: 1;
-}
-
-.contact-hero-subtitle {
-    font-size: 16px;
-    color: var(--text-secondary);
-    max-width: 480px;
-    margin: 0 auto;
-    line-height: 1.6;
-    position: relative;
-    z-index: 1;
-}
 
 /* Contact Content */
 .contact-content {
@@ -352,10 +300,6 @@
 }
 
 @media (max-width: 768px) {
-    .contact-hero-title {
-        font-size: 32px;
-    }
-
     .contact-form .form-row {
         grid-template-columns: 1fr;
     }
@@ -375,7 +319,7 @@
 
 /* Response Time Badge */
 .response-time-section {
-    padding: 0 0 30px;
+    padding: 20px 0 40px;
 }
 
 .response-time-card {

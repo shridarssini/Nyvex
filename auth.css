@@ -4,6 +4,21 @@
     text-decoration: none;
 }
 
+.auth-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: color 0.3s;
+}
+
+.auth-back:hover {
+    color: var(--accent);
+}
+
 .auth-section {
     min-height: 100vh;
     display: flex;
@@ -132,20 +147,22 @@
 
 .input-wrapper {
     position: relative;
-    display: flex;
-    align-items: center;
 }
 
 .input-wrapper i:first-child {
     position: absolute;
     left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
     color: var(--text-secondary);
     font-size: 14px;
+    z-index: 1;
+    pointer-events: none;
 }
 
 .input-wrapper input {
     width: 100%;
-    padding: 13px 14px 13px 42px;
+    padding: 13px 44px 13px 42px;
     background: var(--bg-primary);
     border: 1px solid var(--border-color);
     border-radius: 10px;
@@ -153,6 +170,7 @@
     font-size: 14px;
     transition: all 0.3s ease;
     outline: none;
+    display: block;
 }
 
 .input-wrapper input:focus {
@@ -167,13 +185,22 @@
 
 .toggle-password {
     position: absolute;
-    right: 14px;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
     background: none;
     border: none;
     color: var(--text-secondary);
     cursor: pointer;
     font-size: 14px;
     transition: color 0.3s ease;
+    z-index: 2;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
 }
 
 .toggle-password:hover {

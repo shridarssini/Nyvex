@@ -2,33 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23020817'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='20' fill='%234FE3E3'%3EN%3C/text%3E%3C/svg%3E">`n    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nyvex - Mobile Auto Detailing</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header / Navigation -->
     <header class="header">
         <div class="container header-content">
             <div class="logo">
-                <div class="logo-icon">N</div>
+                <img src="images/logo.png" alt="Nyvex" class="logo-img">
                 <div class="logo-text">
                     <span class="logo-name">Nyvex</span>
-                    <span class="logo-tagline">Mobile Auto Detailing</span>
+                    
                 </div>
             </div>
-            <nav class="nav">
-                <a href="#" class="nav-link active">Home</a>
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="booking.html" class="nav-link">Booking</a>
-                <a href="gallery.html" class="nav-link">Gallery</a>
-                <a href="about.html" class="nav-link">About Us</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-                <a href="blog.html" class="nav-link">Blog</a>
+                        <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
                 <a href="promo.html" class="nav-link">Home2</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
             </nav>
-            <div class="header-right">
+            <div class="header-right"><a href="booking.html" class="nav-book-btn">Book Now</a>
                 <div class="header-actions">
                     <button class="icon-btn" id="themeBtn"><i class="fas fa-moon"></i></button>
                     <div class="profile-dropdown-wrapper">
@@ -47,7 +48,7 @@
         </div>
     </header>
 
-    <!-- 1. Hero Section -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-content">
             <div class="hero-text">
@@ -61,9 +62,22 @@
                     <a href="booking.html" class="btn btn-primary">Book Appointment</a>
                     <a href="services.html" class="btn btn-outline">Explore Services <i class="fas fa-arrow-right"></i></a>
                 </div>
+                <div class="hero-trust">
+                    <div class="trust-faces">
+                        <div class="tf">R</div>
+                        <div class="tf">P</div>
+                        <div class="tf">A</div>
+                        <div class="tf">S</div>
+                    </div>
+                    <span>Trusted by <strong>500+</strong> car owners</span>
+                </div>
             </div>
             <div class="hero-image">
                 <img src="https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Premium Car">
+                <div class="hero-image-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <div><strong>Ceramic Protected</strong><small>5 Year Warranty</small></div>
+                </div>
             </div>
         </div>
     </section>
@@ -295,10 +309,10 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <div class="logo">
-                        <div class="logo-icon">N</div>
+                        <img src="images/logo.png" alt="Nyvex" class="logo-img">
                         <div class="logo-text">
                             <span class="logo-name">Nyvex</span>
-                            <span class="logo-tagline">Mobile Auto Detailing</span>
+                            
                         </div>
                     </div>
                     <p class="footer-about">Professional auto detailing and ceramic coating services. We bring premium car care to your doorstep.</p>
@@ -360,3 +374,6 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+
+

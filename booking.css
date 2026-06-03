@@ -1,58 +1,6 @@
 /* ===== Booking Page Styles ===== */
 
-/* Hero */
-.booking-hero {
-    padding: 140px 0 50px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
 
-.booking-hero::before {
-    content: '';
-    position: absolute;
-    top: -150px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 700px;
-    height: 700px;
-    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 60%);
-    opacity: 0.12;
-    border-radius: 50%;
-}
-
-.booking-hero-icon {
-    width: 70px;
-    height: 70px;
-    border-radius: 18px;
-    background: linear-gradient(135deg, rgba(79, 227, 227, 0.15), rgba(79, 227, 227, 0.03));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-    color: var(--accent);
-    font-size: 28px;
-    position: relative;
-    z-index: 1;
-}
-
-.booking-hero-title {
-    font-size: 44px;
-    font-weight: 800;
-    margin-bottom: 14px;
-    position: relative;
-    z-index: 1;
-}
-
-.booking-hero-subtitle {
-    font-size: 16px;
-    color: var(--text-secondary);
-    max-width: 480px;
-    margin: 0 auto;
-    line-height: 1.6;
-    position: relative;
-    z-index: 1;
-}
 
 /* Booking Section */
 .booking-section {
@@ -377,10 +325,6 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-    .booking-hero-title {
-        font-size: 32px;
-    }
-
     .service-select-grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -473,7 +417,7 @@
 
 /* Why Book With Us */
 .why-book-section {
-    padding: 0 0 10px;
+    padding: 20px 0 30px;
 }
 
 .why-book-badges {
@@ -587,7 +531,21 @@
 
 
 /* Fix date input calendar icon */
-input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(1);
+.booking-form-grid input[type="date"] {
+    position: relative;
+}
+
+.booking-form-grid input[type="date"]::-webkit-calendar-picker-indicator {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
+    opacity: 1;
+}
+
+[data-theme="light"] .booking-form-grid input[type="date"]::-webkit-calendar-picker-indicator {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='black' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z'/%3E%3C/svg%3E");
 }
